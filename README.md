@@ -81,12 +81,13 @@ Keys: Use the names from the Windows Keys enumeration.
 Examples: D0, D1, F12, A, B, etc.
 
 For a full list of key names you can use in hotkeys.txt 
-See the official Microsoft documentation: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.keys
+See the official Microsoft documentation: 
+https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.keys
 
-  Toggle=2,D0    -> Ctrl + 0 (toggle dim on/off)
-  Dim1=2,D1      -> Ctrl + 1 (set dim 30%)
-  Dim2=2,D2      -> Ctrl + 2 (set dim 60%)
-  Dim3=2,D3      -> Ctrl + 3 (set dim 85%)
+    Toggle=2,D0    -> Ctrl + 0 (toggle dim on/off)
+    Dim1=2,D1      -> Ctrl + 1 (set dim 30%)
+    Dim2=2,D2      -> Ctrl + 2 (set dim 60%)
+    Dim3=2,D3      -> Ctrl + 3 (set dim 85%)
 
 You can combine modifiers:
 Toggle=6,D0    -> Ctrl + Shift + 0 (because 2 + 4 = 6)
