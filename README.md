@@ -38,7 +38,7 @@ dotnet run
 
 
 <br><br>
-### ⚠️ To Set the app to always on (start with startup):
+### ⚠️ To Set the app to always on (keep on startup):
 
 1. Right-click the tray icon
 2. Check **“Start with Windows”** to enable or disable startup
