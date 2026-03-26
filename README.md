@@ -36,8 +36,8 @@ dotnet run
 - The tray icon appears in the bottom-right corner of Windows
 - Double-click tray icon or use **Ctrl + 0** to toggle dimming
 
+<br>
 
-<br><br>
 ### ⚠️ To Set the app to always on (keep on startup):
 
 1. Right-click the tray icon
@@ -54,7 +54,8 @@ dotnet run
 
 ---
 
-## Hotkeys
+
+## Hotkeys & Changing configuration
 
 | Hotkey      | Action               |
 |------------|---------------------|
@@ -73,10 +74,10 @@ You can change the hotkeys to any keys or combo keys you like by editing the **h
 4. Save the file
 5. Restart the app to apply the changes
 
---- 
+<br>
 
-### How do I know what numbers to use for editing hot key configuration in hotkeys.txt ?
-Full list of corresponding numbers to keys: 
+### How do I know which numbers correspond to which keys when editing hotkeys.txt?
+The full list of corresponding numbers to keys here: 
 - Microsoft Documentation: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.keys
 
 ### Quick tips: 
