@@ -25,8 +25,9 @@ dotnet build
 
 - This creates `DimmerApp.exe` in `bin/Debug/net8.0/` (or `bin/Release/net8.0/` if using release build)
 
-**If you want to set the app to always run. Right click the tray icon and check 'Start with Windows'.
-This will set it to always run on startup. Close the program and restart your computer to test.***
+### NOTE: 
+If you would like to set the app to always run. After running with dotnet build, right click the tray icon and check **'Start with Windows'**.
+Close the program and restart your computer. Restart your computer. This will set it to always run on startup.
 
 ### 2. Run the program
 
