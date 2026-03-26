@@ -49,7 +49,7 @@ dotnet run
 
 > ⚠️ Startup only works after the program has been run at least once
 
----
+
 
 ## Hotkeys
 
