@@ -60,7 +60,7 @@ dotnet run
 | Ctrl + 2    | Set dim level 60%   |
 | Ctrl + 3    | Set dim level 85%   |
 
-CUSTOMIZING HOTKEYS
+
 
 You can change the hotkeys to any keys or combo keys you like by editing the **hotkeys.txt** file.
 
