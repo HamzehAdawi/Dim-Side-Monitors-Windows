@@ -22,7 +22,7 @@ Requires **.NET SDK 8+**.
 
 ```powershell
 git clone <your-repo-url>
-cd DimmerApp
+cd Dim-Side-Monitors-Windows
 dotnet build
 ```
 
