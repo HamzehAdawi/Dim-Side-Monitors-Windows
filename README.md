@@ -45,6 +45,11 @@ dotnet run
 3. Close the program (right click exit from tray icon) and restart your computer.
 4. The app will now always launch automatically on startup, unless unchecked.
 
+
+
+<img width="473" height="221" alt="image" src="https://github.com/user-attachments/assets/3d8507a6-5f2c-4db3-acfe-30f41aae4d25" />
+
+
 > Startup only works after the program has been run at least once
 
 ---
