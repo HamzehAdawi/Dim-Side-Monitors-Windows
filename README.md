@@ -71,7 +71,7 @@ You can change the hotkeys to any keys or combo keys you like by editing the **h
 5. Restart the app to apply the changes
 
 
-TIP:
+### TIPS:
 
 Modifier numbers:
 0 = None
@@ -84,8 +84,6 @@ Examples: D0, D1, F12, A, B, etc.
 
 For a full list of key names you can use in hotkeys.txt, see the official Microsoft documentation:
 https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.keys
-
-EXAMPLES
 
 Toggle=2,D0    -> Ctrl + 0 (toggle dim on/off)
 Dim1=2,D1      -> Ctrl + 1 (set dim 30%)
