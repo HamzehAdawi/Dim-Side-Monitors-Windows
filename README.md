@@ -1,6 +1,6 @@
 # Dim Side Monitors for Windows
 
-A lightweight Windows utility to dim side monitors on multi-monitor setups, able to toggle by a hotkey.
+A very simple Windows utility to dim side monitors on multi-monitor setups, able to toggle on/off by a hotkey.
 
 ## Features
 
