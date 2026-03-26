@@ -10,6 +10,7 @@ class DimmerApp : Form
     private static bool dimmed = false;
     private static double opacity = 0.5;
 
+	private Dictionary<string, (int modifier, Keys key)> hotkeyConfig = new();
     private NotifyIcon trayIcon;
     private ToolStripMenuItem startupItem;
 
@@ -32,10 +33,31 @@ class DimmerApp : Form
         WindowState = FormWindowState.Minimized;
         Load += (s, e) => Hide();
 
-        RegisterHotKey(Handle, HK_TOGGLE, MOD_CONTROL, (int)Keys.D0);
-        RegisterHotKey(Handle, HK_DIM1, MOD_CONTROL, (int)Keys.D1);
-        RegisterHotKey(Handle, HK_DIM2, MOD_CONTROL, (int)Keys.D2);
-        RegisterHotKey(Handle, HK_DIM3, MOD_CONTROL, (int)Keys.D3);
+        LoadHotKeysFromFile();
+        
+        if (hotkeyConfig.ContainsKey("Toggle"))
+        {
+            var hk = hotkeyConfig["Toggle"];
+            RegisterHotKey(Handle, HK_TOGGLE, hk.modifier, (int)hk.key);
+        }
+        
+        if (hotkeyConfig.ContainsKey("Dim1"))
+        {
+            var hk = hotkeyConfig["Dim1"];
+            RegisterHotKey(Handle, HK_DIM1, hk.modifier, (int)hk.key);
+        }
+        
+        if (hotkeyConfig.ContainsKey("Dim2"))
+        {
+            var hk = hotkeyConfig["Dim2"];
+            RegisterHotKey(Handle, HK_DIM2, hk.modifier, (int)hk.key);
+        }
+        
+        if (hotkeyConfig.ContainsKey("Dim3"))
+        {
+            var hk = hotkeyConfig["Dim3"];
+            RegisterHotKey(Handle, HK_DIM3, hk.modifier, (int)hk.key);
+        }
 
          trayIcon = new NotifyIcon()
         {
@@ -84,6 +106,35 @@ class DimmerApp : Form
         }
 
         base.WndProc(ref m);
+    }
+
+    private void LoadHotKeysFromFile()
+    {
+        string path = "hotkeys.txt";
+        
+        // If file doesn't exist, create it with defaults
+        if (!System.IO.File.Exists(path))
+        {
+            var defaults = new string[]
+            {
+                "Toggle=2,D0",
+                "Dim1=2,D1",
+                "Dim2=2,D2",
+                "Dim3=2,D3"
+            };
+            System.IO.File.WriteAllLines(path, defaults);
+        }
+    
+        foreach (var line in System.IO.File.ReadAllLines(path))
+        {
+            if (string.IsNullOrWhiteSpace(line) || !line.Contains("=")) continue;
+            var parts = line.Split('=');
+            var name = parts[0];
+            var values = parts[1].Split(',');
+            int modifier = int.Parse(values[0]);
+            Keys key = (Keys)Enum.Parse(typeof(Keys), values[1]);
+            hotkeyConfig[name] = (modifier, key);
+        }
     }
 
     private void ToggleDim()
